@@ -9,12 +9,13 @@
     <!-- ═══════════════════════════════════════════
          SEO — TITLE & META
     ═══════════════════════════════════════════ -->
-    <title>Capman – Capability Manifest Generator for AI Agents</title>
+    <title>Capman — Capability Manifest Engine for AI Agents</title>
     <meta
       name="description"
-      content="Build-time capability manifests for AI agents. Capman analyzes your TypeScript app and emits a machine-readable API map — agents execute directly, not through your DOM. npm install capman"
+      content="Give your AI agent a map of your app. Capman routes natural language queries to the right API call — no DOM, no guessing. npm install capman"
     />
-    <meta name="keywords" content="capability manifest, AI agents, build-time instrumentation, LLM app instrumentation, MCP alternative, TypeScript AI, machine-readable API, semantic application map, AI agent capability map" />
+    <meta name="keywords" content="capability matching, AI agent routing, LLM query routing, TypeScript AI agents, 
+      capability manifest, BM25 matching, AI agent SDK, natural language to API, AI agent infrastructure" />
     <link rel="canonical" href="https://capman.qzz.io/" />
 
     <!-- ═══════════════════════════════════════════
@@ -233,7 +234,7 @@
           <a
             href="https://github.com/Hobbydefiningdoctory/capman/blob/main/README.md"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             class="hover:text-text transition-colors"
             >Docs</a
           >
@@ -251,13 +252,13 @@
               id="versions-menu"
               class="hidden absolute right-0 mt-2 w-44 bg-surface border border-border rounded-md shadow-xl py-1 text-xs"
             >
-              <a href="https://www.npmjs.com/package/capman/v/0.6.2" target="_blank" class="block px-4 py-2 text-gold hover:bg-surface2">v0.6.2 (latest)</a>
-              <a href="https://www.npmjs.com/package/capman/v/0.6.1" target="_blank" class="block px-4 py-2 text-text-dim hover:bg-surface2 hover:text-text">v0.6.1</a>
-              <a href="https://www.npmjs.com/package/capman/v/0.6.0" target="_blank" class="block px-4 py-2 text-text-dim hover:bg-surface2 hover:text-text">v0.6.0</a>
+              <a href="https://www.npmjs.com/package/capman/v/0.6.2" target="_blank" rel="noopener noreferrer" class="block px-4 py-2 text-gold hover:bg-surface2">v0.6.2 (latest)</a>
+              <a href="https://www.npmjs.com/package/capman/v/0.6.1" target="_blank" rel="noopener noreferrer" class="block px-4 py-2 text-text-dim hover:bg-surface2 hover:text-text">v0.6.1</a>
+              <a href="https://www.npmjs.com/package/capman/v/0.6.0" target="_blank" rel="noopener noreferrer" class="block px-4 py-2 text-text-dim hover:bg-surface2 hover:text-text">v0.6.0</a>
               <a
                 href="https://github.com/Hobbydefiningdoctory/capman/blob/main/CHANGELOG.md"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 class="block px-4 py-2 text-text-dim hover:bg-surface2 hover:text-text border-t border-border mt-1 pt-2"
                 >Changelog →</a
               >
@@ -269,7 +270,7 @@
           <a
             href="https://github.com/Hobbydefiningdoctory/capman"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             class="flex items-center gap-2 px-3.5 py-2 text-sm border border-border rounded-md hover:border-text-dim transition-colors"
           >
             <svg viewBox="0 0 16 16" class="w-4 h-4" fill="currentColor">
@@ -302,7 +303,7 @@
 
       <div id="mobile-menu" class="hidden md:hidden border-t border-border mobile-menu-panel">
         <div class="mobile-menu-inner">
-          <a href="https://github.com/Hobbydefiningdoctory/capman/blob/main/README.md" target="_blank" class="mobile-menu-link">
+          <a href="https://github.com/Hobbydefiningdoctory/capman/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="mobile-menu-link">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
             Docs
           </a>
@@ -312,13 +313,13 @@
             Versions
           </div>
           <div class="nav-mobile-versions">
-            <a href="https://www.npmjs.com/package/capman/v/0.5.3" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.npmjs.com/package/capman/v/0.6.2" target="_blank" rel="noopener noreferrer">
               <span class="latest-version"><span class="latest-pip"></span>v0.6.2</span><em>May 24, 2026</em>
             </a>
-            <a href="https://www.npmjs.com/package/capman/v/0.5.2" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.npmjs.com/package/capman/v/0.6.1" target="_blank" rel="noopener noreferrer">
               <span>v0.6.1</span><em>May 21, 2026</em>
             </a>
-            <a href="https://www.npmjs.com/package/capman/v/0.5.1" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.npmjs.com/package/capman/v/0.6.0" target="_blank" rel="noopener noreferrer">
               <span>v0.6.0</span><em>May 15, 2026</em>
             </a>
             <a href="https://github.com/Hobbydefiningdoctory/capman/blob/main/CHANGELOG.md"
@@ -345,21 +346,19 @@
           class="inline-flex items-center gap-2 px-4 py-1.5 mb-10 rounded-full border border-gold/30 bg-gold/5 text-[11px] sm:text-xs tracking-widest uppercase text-gold"
         >
           <span class="w-1.5 h-1.5 rounded-full bg-gold animate-pulse"></span>
-          v0.6.2 — Concurrency Safety &amp; Health API
+          v0.6.2 — ConcurrentCapmanEngine  &amp; health() API now available
         </div>
 
         <h1
-          class="font-display font-medium text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.05] tracking-tight text-text"
-        >
-          The capability manifest
-          <span class="italic text-crimson-glow block">your AI agent</span>
-          <span class="block text-gold">needs to stop guessing</span>
+          class="font-display font-medium text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.05] tracking-tight text-text">
+          Give AI agents a
+          <span class="italic text-crimson-glow block"> semantic map</span>
+          of your
+          <span class="block text-gold">application</span>
         </h1>
 
         <p class="mt-8 max-w-2xl mx-auto text-base sm:text-lg text-text-dim leading-relaxed">
-          Capman instruments your TypeScript application at build time, emitting a
-          machine-readable capability manifest — a precise, versioned index of every API your app exposes.
-          Your AI agent reads the manifest once and executes with surgical precision:
+          Your agent asks in plain English. Capman finds the right API call and executes it.
           <em class="text-text">no DOM traversal, no brittle selectors, no hallucinated click paths</em>.
         </p>
 
@@ -372,7 +371,7 @@
           <a
             href="https://github.com/Hobbydefiningdoctory/capman"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             class="w-full sm:w-auto px-7 py-3.5 border border-border hover:border-text-dim bg-surface/40 text-text font-medium rounded-md transition-colors"
             >View on GitHub</a
           >
@@ -392,13 +391,14 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div class="space-y-3">
             <div class="w-8 h-px bg-crimson mb-5"></div>
-            <h3 class="font-display text-xl text-text">DOM Dependency</h3>
-            <p class="text-sm text-text-dim leading-relaxed">Your agent parses Tailwind classes and infers intent from visual hierarchy. A class rename or layout refactor silently breaks the entire interaction chain with no warning..</p>
+            <h3 class="font-display text-xl text-text">Blind navigation</h3>
+            <p class="text-sm text-text-dim leading-relaxed">Your agent clicks through screens, parses visual hierarchy, and infers intent 
+            from layout. A button rename, a route change, or a CSS refactor silently breaks the entire flow — with no error, no log, no warning.</p>
           </div>
           <div class="space-y-3">
             <div class="w-8 h-px bg-crimson mb-5"></div>
             <h3 class="font-display text-xl text-text">Structural Brittleness</h3>
-            <p class="text-sm text-text-dim leading-relaxed">Every design iteration is a regression. Agents relying on CSS selectors and DOM traversal cannot distinguish a visual change from a functional one  — both cause silent failures in production.</p>
+            <p class="text-sm text-text-dim leading-relaxed">Every design iteration is a regression. Agents relying on CSS selectors and DOM traversal cannot distinguish a visual change from a functional one — both cause silent failures in production.</p>
           </div>
           <div class="space-y-3">
             <div class="w-8 h-px bg-crimson mb-5"></div>
@@ -416,13 +416,17 @@
           <div>
             <p class="text-xs tracking-[0.25em] uppercase text-gold mb-4">The Technical Edge</p>
             <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-text leading-tight mb-6">
-              Build-time instrumentation.<br /><span class="italic text-crimson-glow">Zero UI dependency.</span>
+              Capability matching<br /><span class="italic text-crimson-glow">Zero UI dependency.</span>
             </h2>
             <p class="text-text-dim leading-relaxed mb-4">
-              Capman runs as part of your build pipeline. It analyzes your application's TypeScript surface — components, routes, API handlers — and emits a structured capability manifest: a precise, versioned index of everything your app can do.
-            </p>
+              You define a capability manifest — a list of what your app can do and which API handles each thing. At query time, CapmanEngine.ask() runs a three-tier cascade: </p>
+            <ul class="text-text-dim leading-relaxed mb-4 list-disc pl-6 space-y-1">
+              <li>BM25 keyword match first</li>
+              <li>Fuzzy matching for typos and paraphrases</li>
+              <li>LLM fallback only when confidence is still low</li>
+            </ul><br />
             <p class="text-text-dim leading-relaxed">
-              Your AI agent reads the manifest once and executes with surgical precision. No DOM traversal. No brittle selectors. No guessing. Direct API execution against a schema it understands completely.
+              The result is a direct API call, a confidence verdict, and a full execution trace — not a suggested click path.
             </p>
           </div>
           <div class="space-y-4">
@@ -495,7 +499,7 @@
           <a
             href="https://github.com/Hobbydefiningdoctory/capman/blob/main/README.md"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             class="doc-card group"
           >
             <div class="doc-icon">
@@ -510,13 +514,13 @@
             <p class="text-sm text-text-dim leading-relaxed mb-6">
               Overview, quick start, install steps, and core concepts. Start here.
             </p>
-            <span class="doc-arrow">Read overview <span aria-hidden="true">→</span></span>
+            <span class="doc-arrow">Read the overview <span aria-hidden="true">→</span></span>
           </a>
 
           <a
             href="https://github.com/Hobbydefiningdoctory/capman/blob/main/CODEBASE.md"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             class="doc-card group"
           >
             <div class="doc-icon">
@@ -529,13 +533,13 @@
             <p class="text-sm text-text-dim leading-relaxed mb-6">
               Full technical reference — every option, every field, every internal decision.
             </p>
-            <span class="doc-arrow">Explore internals <span aria-hidden="true">→</span></span>
+            <span class="doc-arrow">Explore the internals <span aria-hidden="true">→</span></span>
           </a>
 
           <a
             href="https://github.com/Hobbydefiningdoctory/capman/blob/main/CONTRIBUTING.md"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             class="doc-card group"
           >
             <div class="doc-icon">
@@ -573,17 +577,17 @@
               <svg class="w-4 h-4 text-text-muted flex-shrink-0 transition-transform group-open:rotate-45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             </summary>
             <div class="px-6 pb-5 text-sm text-text-dim leading-relaxed border-t border-border-dim pt-4">
-              A capability manifest is a machine-readable JSON file that describes everything your application can do — every API endpoint, its parameters, data access scope, and semantic description. AI agents read the manifest once and execute API calls directly, without navigating your UI. Capman generates and maintains this manifest automatically at build time from your TypeScript source.
+            A capability manifest is a JSON file that describes what your application can do. Each entry — called a capability — names a function your app exposes, specifies the API endpoint that handles it, lists the parameters it accepts, and declares who is allowed to call it (public, user-owned, or admin). </br>CapmanEngine reads the manifest and uses it to match natural language queries to the right API call. You define the manifest once. Your agent uses it on every query.
             </div>
           </details>
 
           <details class="bg-surface border border-border rounded-lg group">
             <summary class="px-6 py-5 cursor-pointer list-none flex items-center justify-between font-display text-lg text-text select-none">
-              How does Capman compare to MCP?
+              Does fuzzy matching work automatically?
               <svg class="w-4 h-4 text-text-muted flex-shrink-0 transition-transform group-open:rotate-45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             </summary>
             <div class="px-6 pb-5 text-sm text-text-dim leading-relaxed border-t border-border-dim pt-4">
-              Capman is a lightweight MCP alternative focused on TypeScript applications. It generates capability manifests at build time by analyzing your existing API surface — no separate protocol server, no runtime process, no new infrastructure. The result is a static, versioned manifest your agents consume via any HTTP client. MCP requires a dedicated server; Capman requires a build step.
+              Fuzzy matching is opt-in. It's disabled by default. Enable it with fuzzyMatch: true in your engine options. Once enabled, typos and paraphrases that BM25 keyword scoring misses — like "cancle a subscritpion" — are caught by fuzzy matching before the query falls through to the LLM.
             </div>
           </details>
 
@@ -603,7 +607,7 @@
               <svg class="w-4 h-4 text-text-muted flex-shrink-0 transition-transform group-open:rotate-45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             </summary>
             <div class="px-6 pb-5 text-sm text-text-dim leading-relaxed border-t border-border-dim pt-4">
-              Any LLM that accepts a string and returns a string. Capman's LLM interface is model-agnostic — pass Anthropic Claude, OpenAI GPT-4, or any local model wrapper. The LLM reranker only fires for genuinely ambiguous queries; BM25 and fuzzy matching handle the majority of traffic without any LLM call.
+              Any LLM that accepts a string and returns a string. capman's LLM interface is model-agnostic — pass Anthropic Claude, OpenAI GPT-4, or any local model wrapper. The LLM fallback only fires for genuinely ambiguous queries where BM25 keyword scoring falls below your confidence threshold. Most queries resolve without any LLM call at all, keeping your costs low.
             </div>
           </details>
         </div>
@@ -625,12 +629,12 @@
           <a
             href="#install"
             class="w-full sm:w-auto px-7 py-3.5 bg-crimson hover:bg-crimson-glow text-text font-medium rounded-md transition-all shadow-[0_0_40px_rgba(160,0,0,0.35)]"
-            >Get Started</a
+            >Try capman free</a
           >
           <a
             href="https://github.com/Hobbydefiningdoctory/capman"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             class="w-full sm:w-auto px-7 py-3.5 border border-border hover:border-text-dim bg-surface/40 text-text font-medium rounded-md transition-colors"
             >Star on GitHub</a
           >
@@ -649,8 +653,8 @@
           <span>MIT License</span>
         </div>
         <div class="flex items-center gap-6">
-          <a href="https://github.com/Hobbydefiningdoctory/capman" target="_blank" rel="noopener" class="hover:text-text-dim transition-colors">GitHub</a>
-          <a href="https://github.com/Hobbydefiningdoctory/capman/blob/main/CHANGELOG.md" target="_blank" rel="noopener" class="hover:text-text-dim transition-colors">Changelog</a>
+          <a href="https://github.com/Hobbydefiningdoctory/capman" target="_blank" rel="noopener noreferrer" class="hover:text-text-dim transition-colors">Source on GitHub</a>
+          <a href="https://github.com/Hobbydefiningdoctory/capman/blob/main/CHANGELOG.md" target="_blank" rel="noopener noreferrer" class="hover:text-text-dim transition-colors">Changelog</a>
           <span class="text-gold/70 font-mono text-xs">v0.6.2</span>
         </div>
       </div>
