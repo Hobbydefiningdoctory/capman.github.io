@@ -4,25 +4,55 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <title>Capman — Capability Manifests for AI Agents</title>
+    <meta name="theme-color" content="#0a0a0a" />
+
+    <!-- ═══════════════════════════════════════════
+         SEO — TITLE & META
+    ═══════════════════════════════════════════ -->
+    <title>Capman – Capability Manifest Generator for AI Agents</title>
     <meta
       name="description"
-      content="Capman instruments your app at build time, generating semantic capability manifests so AI agents call your APIs directly — not your DOM. npm install capman"
+      content="Build-time capability manifests for AI agents. Capman analyzes your TypeScript app and emits a machine-readable API map — agents execute directly, not through your DOM. npm install capman"
     />
-    <meta property="og:title" content="Capman — Build-Time Capability Manifests for AI Agents" />
-    <meta
-      property="og:description"
-      content="Stop letting AI agents navigate your UI by sight. Capman produces a machine-readable manifest at build time so agents execute API calls with precision."
-    />
-    <meta property="og:type" content="website" />
-    <meta name="keywords" content="capability manifest, AI agents, semantic map, build-time instrumentation, LLM app instrumentation, MCP alternative, TypeScript AI, machine-readable API" />
+    <meta name="keywords" content="capability manifest, AI agents, build-time instrumentation, LLM app instrumentation, MCP alternative, TypeScript AI, machine-readable API, semantic application map, AI agent capability map" />
+    <link rel="canonical" href="https://capman.qzz.io/" />
 
+    <!-- ═══════════════════════════════════════════
+         OPEN GRAPH
+    ═══════════════════════════════════════════ -->
+    <meta property="og:title" content="Capman – Capability Manifest Generator for AI Agents" />
+    <meta property="og:description" content="Build-time capability manifests for AI agents. Capman analyzes your TypeScript app and emits a machine-readable API map — agents call APIs directly, not your DOM." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://capman.qzz.io/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Capman" />
+    <meta property="og:image" content="https://capman.qzz.io/logo/2.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- ═══════════════════════════════════════════
+         TWITTER CARD
+    ═══════════════════════════════════════════ -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Capman – Capability Manifest Generator for AI Agents" />
+    <meta name="twitter:description" content="Build-time capability manifests for AI agents. Instrument your TypeScript app so agents call APIs directly — no DOM scraping. npm install capman" />
+    <meta name="twitter:image" content="https://capman.qzz.io/logo/2.png" />
+
+    <!-- ═══════════════════════════════════════════
+         FONTS — async loading (non-render-blocking)
+    ═══════════════════════════════════════════ -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" />
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+    </noscript>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -55,6 +85,135 @@
     </script>
 
     <link rel="stylesheet" href="styles.css?v=4" />
+
+    <!-- ═══════════════════════════════════════════
+         STRUCTURED DATA — WebSite + Organization + SoftwareApplication
+    ═══════════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://capman.qzz.io/#website",
+          "url": "https://capman.qzz.io/",
+          "name": "Capman",
+          "description": "Build-time capability manifest generator for AI agents and LLMs"
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://capman.qzz.io/#organization",
+          "name": "Capman",
+          "url": "https://capman.qzz.io/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://capman.qzz.io/logo/2.png"
+          },
+          "sameAs": [
+            "https://github.com/Hobbydefiningdoctory/capman",
+            "https://www.npmjs.com/package/capman"
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Capman",
+      "alternateName": "capman",
+      "applicationCategory": "DeveloperApplication",
+      "applicationSubCategory": "AI Agent Infrastructure",
+      "operatingSystem": "Node.js",
+      "programmingLanguage": "TypeScript",
+      "url": "https://capman.qzz.io/",
+      "downloadUrl": "https://www.npmjs.com/package/capman",
+      "installUrl": "https://www.npmjs.com/package/capman",
+      "softwareVersion": "0.6.2",
+      "datePublished": "2026-05-15",
+      "dateModified": "2026-05-24",
+      "license": "https://opensource.org/licenses/MIT",
+      "isAccessibleForFree": true,
+      "description": "Build-time TypeScript library that instruments web applications and generates machine-readable capability manifests, enabling AI agents to call APIs directly instead of navigating the DOM.",
+      "featureList": [
+        "OpenAPI import manifest generation",
+        "AI-assisted manifest generation",
+        "BM25 keyword matching",
+        "Fuzzy matching with Fuse.js",
+        "LLM reranking fallback",
+        "Privacy enforcement per capability",
+        "Adaptive learning with time-decayed IDF",
+        "Semantic embedding support",
+        "LLM rate limiting and circuit breaker",
+        "ConcurrentCapmanEngine for server use",
+        "Pluggable caching (memory and file-backed)",
+        "Zero runtime dependencies"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://capman.qzz.io/"
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a capability manifest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A capability manifest is a machine-readable JSON file that describes everything your application can do — every API endpoint, its parameters, data access scope, and semantic description. AI agents read the manifest once and execute API calls directly, without navigating your UI."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Capman differ from MCP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Capman generates capability manifests at build time by analyzing your TypeScript application's existing API surface. It requires no separate protocol server and produces a static, versioned manifest your agents can consume via any HTTP client. It is a lightweight MCP alternative focused on TypeScript applications."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Capman add runtime overhead?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Capman runs entirely at build time. The generated manifest is a static JSON file. There are zero runtime dependencies added to your application."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I install Capman?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Install via npm: npm install capman. Then generate your manifest with: npx capman generate --from openapi.json (from an existing OpenAPI spec) or npx capman generate --ai (AI-assisted) or npx capman init (from scratch)."
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body class="font-body bg-bg text-text antialiased">
     <!-- NAV -->
@@ -198,9 +357,9 @@
         </h1>
 
         <p class="mt-8 max-w-2xl mx-auto text-base sm:text-lg text-text-dim leading-relaxed">
-          Capman runs at build time, analyzing your TypeScript application and emitting a
-          machine-readable capability manifest. Your AI agent reads it once and calls the
-          right function directly —
+          Capman instruments your TypeScript application at build time, emitting a
+          machine-readable capability manifest — a precise, versioned index of every API your app exposes.
+          Your AI agent reads the manifest once and executes with surgical precision:
           <em class="text-text">no DOM traversal, no brittle selectors, no hallucinated click paths</em>.
         </p>
 
@@ -234,17 +393,17 @@
           <div class="space-y-3">
             <div class="w-8 h-px bg-crimson mb-5"></div>
             <h3 class="font-display text-xl text-text">DOM Dependency</h3>
-            <p class="text-sm text-text-dim leading-relaxed">Your agent parses Tailwind classes and infers intent from visual hierarchy. A class rename or layout refactor silently breaks the entire interaction chain.</p>
+            <p class="text-sm text-text-dim leading-relaxed">Your agent parses Tailwind classes and infers intent from visual hierarchy. A class rename or layout refactor silently breaks the entire interaction chain with no warning..</p>
           </div>
           <div class="space-y-3">
             <div class="w-8 h-px bg-crimson mb-5"></div>
             <h3 class="font-display text-xl text-text">Structural Brittleness</h3>
-            <p class="text-sm text-text-dim leading-relaxed">Every design iteration is a regression. Agents relying on CSS selectors and DOM traversal cannot distinguish a visual change from a functional one.</p>
+            <p class="text-sm text-text-dim leading-relaxed">Every design iteration is a regression. Agents relying on CSS selectors and DOM traversal cannot distinguish a visual change from a functional one  — both cause silent failures in production.</p>
           </div>
           <div class="space-y-3">
             <div class="w-8 h-px bg-crimson mb-5"></div>
             <h3 class="font-display text-xl text-text">Hallucinated Click Paths</h3>
-            <p class="text-sm text-text-dim leading-relaxed">Without a capability map, LLMs invent navigation paths — clicking through five screens to reach a function that could have been a single direct API call.</p>
+            <p class="text-sm text-text-dim leading-relaxed">Without a capability map, LLMs invent navigation paths — clicking through five screens to reach a function that could have been a single direct API call with a typed response.</p>
           </div>
         </div>
       </div>
@@ -397,6 +556,60 @@
       </div>
     </section>
 
+        <!-- ═══════════════════════════════════════════
+         FAQ — also feeds FAQPage schema above
+    ═══════════════════════════════════════════ -->
+    <section class="py-20 sm:py-24 border-t border-border-dim bg-surface/30" aria-labelledby="faq-heading">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-14">
+          <p class="text-xs tracking-[0.25em] uppercase text-gold mb-4">FAQ</p>
+          <h2 id="faq-heading" class="font-display text-3xl sm:text-4xl text-text">Common questions</h2>
+        </div>
+
+        <div class="space-y-6">
+          <details class="bg-surface border border-border rounded-lg group">
+            <summary class="px-6 py-5 cursor-pointer list-none flex items-center justify-between font-display text-lg text-text select-none">
+              What is a capability manifest?
+              <svg class="w-4 h-4 text-text-muted flex-shrink-0 transition-transform group-open:rotate-45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </summary>
+            <div class="px-6 pb-5 text-sm text-text-dim leading-relaxed border-t border-border-dim pt-4">
+              A capability manifest is a machine-readable JSON file that describes everything your application can do — every API endpoint, its parameters, data access scope, and semantic description. AI agents read the manifest once and execute API calls directly, without navigating your UI. Capman generates and maintains this manifest automatically at build time from your TypeScript source.
+            </div>
+          </details>
+
+          <details class="bg-surface border border-border rounded-lg group">
+            <summary class="px-6 py-5 cursor-pointer list-none flex items-center justify-between font-display text-lg text-text select-none">
+              How does Capman compare to MCP?
+              <svg class="w-4 h-4 text-text-muted flex-shrink-0 transition-transform group-open:rotate-45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </summary>
+            <div class="px-6 pb-5 text-sm text-text-dim leading-relaxed border-t border-border-dim pt-4">
+              Capman is a lightweight MCP alternative focused on TypeScript applications. It generates capability manifests at build time by analyzing your existing API surface — no separate protocol server, no runtime process, no new infrastructure. The result is a static, versioned manifest your agents consume via any HTTP client. MCP requires a dedicated server; Capman requires a build step.
+            </div>
+          </details>
+
+          <details class="bg-surface border border-border rounded-lg group">
+            <summary class="px-6 py-5 cursor-pointer list-none flex items-center justify-between font-display text-lg text-text select-none">
+              Does Capman add runtime overhead?
+              <svg class="w-4 h-4 text-text-muted flex-shrink-0 transition-transform group-open:rotate-45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </summary>
+            <div class="px-6 pb-5 text-sm text-text-dim leading-relaxed border-t border-border-dim pt-4">
+              No. Capman runs entirely at build time. The generated manifest is a static JSON artifact. There are zero runtime dependencies added to your application. The <code class="font-mono text-xs text-gold">CapmanEngine</code> that ships with the package is consumed by your <em>agent</em>, not your app — your app's bundle is untouched.
+            </div>
+          </details>
+
+          <details class="bg-surface border border-border rounded-lg group">
+            <summary class="px-6 py-5 cursor-pointer list-none flex items-center justify-between font-display text-lg text-text select-none">
+              Which LLMs does Capman support?
+              <svg class="w-4 h-4 text-text-muted flex-shrink-0 transition-transform group-open:rotate-45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </summary>
+            <div class="px-6 pb-5 text-sm text-text-dim leading-relaxed border-t border-border-dim pt-4">
+              Any LLM that accepts a string and returns a string. Capman's LLM interface is model-agnostic — pass Anthropic Claude, OpenAI GPT-4, or any local model wrapper. The LLM reranker only fires for genuinely ambiguous queries; BM25 and fuzzy matching handle the majority of traffic without any LLM call.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <!-- FINAL CTA -->
     <section class="relative py-24 sm:py-28 border-t border-border-dim overflow-hidden">
       <div class="cta-glow" aria-hidden="true"></div>
@@ -406,7 +619,7 @@
           <span class="italic text-gold">capman</span>
         </h2>
         <p class="mt-5 text-text-dim max-w-xl mx-auto">
-          Open source, MIT licensed, and ready for your next AI agent project.
+          Open source, MIT licensed, and zero runtime dependencies. Give your AI agent a precise capability manifest.
         </p>
         <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3">
           <a
