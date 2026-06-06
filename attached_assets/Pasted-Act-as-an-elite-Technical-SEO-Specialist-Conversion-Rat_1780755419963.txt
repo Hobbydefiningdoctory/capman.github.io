@@ -1,0 +1,25 @@
+Act as an elite Technical SEO Specialist, Conversion Rate Optimization (CRO) expert, and world-class Developer Marketer (DevRel Copywriter). 
+
+Analyze the core value proposition of Capman (https://capman.qzz.io/), a TypeScript library built to instrument web applications at build time, generating machine-readable semantic maps and capability manifests so AI agents and LLMs can interact directly with app logic via APIs rather than relying on brittle UI scraping.
+
+Your task is to rewrite and optimize the landing page copy to maximize organic search visibility for high-intent technical queries (e.g., "build-time capability manifests", "semantic application maps for AI", "MCP alternative for web apps", "LLM app instrumentation") while maintaining a minimalist, high-converting aesthetic.
+
+Please provide the following deliverables:
+
+### 1. Meta Infrastructure (SEO Snippet)
+*   **SEO Title Tag:** Under 60 characters. Must balance primary keywords ("Capability Manifest", "AI Agents", or "Semantic Map") with an intense CTR hook for developers.
+*   **Meta Description:** Under 155 characters. Must clearly state the "how it works" and the core developer benefit, ending in an actionable CTA.
+
+### 2. Above-the-Fold Copy (The Hook)
+*   **The H1 (Hero Headline):** A striking, 1-sentence declarative statement using the "Display" serif font style implied by the page head. Avoid generic SaaS fluff. Make it clear *what* Capman is and *who* it is for.
+*   **The Subheadline (The Mechanism):** 2-3 sentences max in body font. Explain the build-time instrumentation mechanism and the contrast between brittle UI scraping vs. clean, machine-readable API execution.
+
+### 3. High-Intent Keyword Map & Core Sections
+Group copy recommendations into three distinct developer-focused psychological pillars:
+*   **The Problem:** The fragility of AI agents attempting to navigate Tailwind classes and DOM structures.
+*   **The Solution (The Technical Edge):** How build-time semantic mapping changes the paradigm.
+*   **The Implementation (The "Time-to-Hello-World"):** Minimalist code block placement/ideas demonstrating how lightweight the TypeScript library is to initialize.
+
+### 4. Tone & Style Constraints
+*   **Aesthetic Alignment:** The copy must match a dark, ultra-minimalist, sophisticated theme (Crimson, Gold, JetBrains Mono, Cormorant Garamond). The tone should feel academic yet deeply pragmatic—like a groundbreaking open-source protocol specification, not an aggressive marketing pitch.
+*   **Clarity over Hype:** Never use words like "revolutionary," "game-changing," or "next-gen." Let the mechanical superiority of the architecture do the selling.

@@ -4,17 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <title>Capman — Give AI agents a semantic map of your application</title>
+    <title>Capman — Capability Manifests for AI Agents</title>
     <meta
       name="description"
-      content="Capman instruments your app at build time so AI agents understand what your app can do, not just what it looks like."
+      content="Capman instruments your app at build time, generating semantic capability manifests so AI agents call your APIs directly — not your DOM. npm install capman"
     />
-    <meta property="og:title" content="Capman — Capability Manifest Engine" />
+    <meta property="og:title" content="Capman — Build-Time Capability Manifests for AI Agents" />
     <meta
       property="og:description"
-      content="A machine-readable manifest of everything your app can do. AI agents read it and go directly to the right API call."
+      content="Stop letting AI agents navigate your UI by sight. Capman produces a machine-readable manifest at build time so agents execute API calls with precision."
     />
     <meta property="og:type" content="website" />
+    <meta name="keywords" content="capability manifest, AI agents, semantic map, build-time instrumentation, LLM app instrumentation, MCP alternative, TypeScript AI, machine-readable API" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -191,16 +192,16 @@
         <h1
           class="font-display font-medium text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.05] tracking-tight text-text"
         >
-          Give AI agents a
-          <span class="italic text-crimson-glow block sm:inline">semantic map</span>
-          of your
-          <span class="block text-gold">application</span>
+          The capability manifest
+          <span class="italic text-crimson-glow block">your AI agent</span>
+          <span class="block text-gold">needs to stop guessing</span>
         </h1>
 
         <p class="mt-8 max-w-2xl mx-auto text-base sm:text-lg text-text-dim leading-relaxed">
-          Capman instruments your app at build time — so AI agents understand
-          what your app can <em class="text-text">do</em>, not just what it
-          <em class="text-text">looks like</em>.
+          Capman runs at build time, analyzing your TypeScript application and emitting a
+          machine-readable capability manifest. Your AI agent reads it once and calls the
+          right function directly —
+          <em class="text-text">no DOM traversal, no brittle selectors, no hallucinated click paths</em>.
         </p>
 
         <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -220,13 +221,81 @@
       </div>
     </section>
 
+    <!-- PROBLEM -->
+    <section class="py-20 sm:py-24 border-t border-border-dim">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-16">
+          <p class="text-xs tracking-[0.25em] uppercase text-gold mb-4">The Problem</p>
+          <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-text max-w-3xl mx-auto leading-tight">
+            AI agents navigating your app <span class="italic text-crimson-glow">by sight</span> is a fragile architecture
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div class="space-y-3">
+            <div class="w-8 h-px bg-crimson mb-5"></div>
+            <h3 class="font-display text-xl text-text">DOM Dependency</h3>
+            <p class="text-sm text-text-dim leading-relaxed">Your agent parses Tailwind classes and infers intent from visual hierarchy. A class rename or layout refactor silently breaks the entire interaction chain.</p>
+          </div>
+          <div class="space-y-3">
+            <div class="w-8 h-px bg-crimson mb-5"></div>
+            <h3 class="font-display text-xl text-text">Structural Brittleness</h3>
+            <p class="text-sm text-text-dim leading-relaxed">Every design iteration is a regression. Agents relying on CSS selectors and DOM traversal cannot distinguish a visual change from a functional one.</p>
+          </div>
+          <div class="space-y-3">
+            <div class="w-8 h-px bg-crimson mb-5"></div>
+            <h3 class="font-display text-xl text-text">Hallucinated Click Paths</h3>
+            <p class="text-sm text-text-dim leading-relaxed">Without a capability map, LLMs invent navigation paths — clicking through five screens to reach a function that could have been a single direct API call.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUTION -->
+    <section class="py-20 sm:py-24 border-t border-border-dim bg-surface/30">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div>
+            <p class="text-xs tracking-[0.25em] uppercase text-gold mb-4">The Technical Edge</p>
+            <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-text leading-tight mb-6">
+              Build-time instrumentation.<br /><span class="italic text-crimson-glow">Zero UI dependency.</span>
+            </h2>
+            <p class="text-text-dim leading-relaxed mb-4">
+              Capman runs as part of your build pipeline. It analyzes your application's TypeScript surface — components, routes, API handlers — and emits a structured capability manifest: a precise, versioned index of everything your app can do.
+            </p>
+            <p class="text-text-dim leading-relaxed">
+              Your AI agent reads the manifest once and executes with surgical precision. No DOM traversal. No brittle selectors. No guessing. Direct API execution against a schema it understands completely.
+            </p>
+          </div>
+          <div class="space-y-4">
+            <div class="bg-surface border border-border rounded-lg p-5">
+              <p class="font-mono text-xs text-text-muted mb-3 tracking-widest uppercase">Without Capman</p>
+              <code class="block font-mono text-xs text-text-dim leading-loose">
+                agent → clicks Home → scrolls → finds button<br />
+                → navigates /events → parses DOM table<br />
+                → clicks row → reads modal → extracts value<br />
+                <span class="text-crimson-glow">→ breaks on next deploy</span>
+              </code>
+            </div>
+            <div class="bg-surface border border-crimson/30 rounded-lg p-5">
+              <p class="font-mono text-xs text-gold mb-3 tracking-widest uppercase">With Capman</p>
+              <code class="block font-mono text-xs text-text leading-loose">
+                agent → reads manifest<br />
+                → calls <span class="text-gold">getEventAvailability({ id, date })</span><br />
+                → receives typed response → done
+              </code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- QUICK INSTALL -->
     <section id="install" class="py-20 sm:py-24 border-t border-border-dim">
       <div class="max-w-2xl mx-auto px-4 sm:px-6 text-center">
-        <p class="text-xs tracking-[0.25em] uppercase text-gold mb-4">Get Started</p>
-        <h2 class="font-display text-3xl sm:text-4xl text-text mb-3">One command to install</h2>
+        <p class="text-xs tracking-[0.25em] uppercase text-gold mb-4">Implementation</p>
+        <h2 class="font-display text-3xl sm:text-4xl text-text mb-3">Zero to manifest in seconds</h2>
         <p class="text-text-dim mb-10">
-          Drop capman into your project and start generating manifests in seconds.
+          One package. No runtime overhead. Drop it into any TypeScript project and your AI agents immediately have a map.
         </p>
 
         <div
